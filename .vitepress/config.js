@@ -238,11 +238,14 @@ function getOtherSidebar() {
 
 function getToolsSidebar() {
   return [
+    { text: 'curl', link: '/tools/curl' },
     { text: 'Docker', link: '/tools/docker' },
     { text: 'GoReleaser', link: '/tools/goreleaser' },
+    { text: 'jq', link: '/tools/jq' },
     { text: 'Make', link: '/tools/make' },
     { text: 'RKE', link: '/tools/rke' },
     { text: 'Semantic Release', link: '/tools/semantic-release' },
     { text: 'Statica', link: '/tools/statica' },
+    { text: 'yq', link: '/tools/yq' },
   ]
 }
