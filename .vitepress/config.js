@@ -51,7 +51,63 @@ export default {
 }
 
 function getKubernetesSidebar() {
-  return []
+  return [
+    { text: 'Home', link: '/kubernetes/' },
+    {
+      text: 'Resources',
+      children: [
+        { text: 'Pod', link: '/kubernetes/resources/pod' },
+        { text: 'Service', link: '/kubernetes/resources/service' },
+        { text: 'Deployment', link: '/kubernetes/resources/deployment' },
+        { text: 'Ingress', link: '/kubernetes/resources/ingress' },
+        { text: 'StatefulSet', link: '/kubernetes/resources/statefulset' },
+        { text: 'DaemonSet', link: '/kubernetes/resources/daemonset' },
+      ],
+    },
+    {
+      text: 'Deploy',
+      children: [
+        { text: 'Managed', link: '/kubernetes/deploy/managed' },
+        { text: 'Self-Hosted', link: '/kubernetes/deploy/self-hosted' },
+        { text: 'Bermetal', link: '/kubernetes/deploy/baremetal' },
+        { text: 'Host OS', link: '/kubernetes/deploy/host-os' },
+      ],
+    },
+    {
+      text: 'Scaling',
+      children: [
+        { text: 'Intro', link: '/kubernetes/scaling/' },
+        { text: 'Horizontal Pod Autoscaler', link: '/kubernetes/scaling/horizontal-pod-autoscaler' },
+        { text: 'Vertical Pod Autoscaler', link: '/kubernetes/scaling/vertical-pod-autoscaler' },
+        { text: 'Cluster Autoscaler', link: '/kubernetes/scaling/cluster-autoscaler' },
+      ],
+    },
+    {
+      text: 'k3s',
+      children: [
+        { text: 'Intro', link: '/kubernetes/k3s/' },
+      ],
+    },
+    {
+      text: 'Cluster Components',
+      children: [
+        { text: 'Intro', link: '/kubernetes/cluster-components/' },
+        { text: 'kube-api', link: '/kubernetes/cluster-components/kube-api' },
+        { text: 'kube-scheduler', link: '/kubernetes/cluster-components/kube-scheduler' },
+        { text: 'kubelet', link: '/kubernetes/cluster-components/kubelet' },
+        { text: 'kube-proxy', link: '/kubernetes/cluster-components/kube-proxy' },
+        { text: 'CoreDNS', link: '/kubernetes/cluster-components/coredns' },
+      ],
+    },
+    {
+      text: 'Cluster Architecture',
+      children: [
+        { text: 'Intro', link: '/kubernetes/cluster-architecture/' },
+        { text: 'Networking', link: '/kubernetes/cluster-architecture/networking' },
+        { text: 'Load Balancing', link: '/kubernetes/cluster-architecture/load-balancing' },
+      ],
+    },
+  ]
 }
 
 function getTerraformSidebar() {
