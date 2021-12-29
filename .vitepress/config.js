@@ -42,9 +42,10 @@ export default {
     sidebar: {
       '/git/': getGitSidebar(),
       '/kubernetes/': getKubernetesSidebar(),
-      '/guide/': getGuideSidebar(),
-      '/config/': getConfigSidebar(),
-      '/': []
+      '/terraform/': getTerraformSidebar(),
+      '/tools/': getToolsSidebar(),
+      '/other/': getOtherSidebar(),
+      '/': [],
     }
   }
 }
@@ -106,52 +107,17 @@ function getGitSidebar() {
   ]
 }
 
-function getMiscSidebar() {
+function getOtherSidebar() {
   return []
 }
 
-function getGuideSidebar() {
+function getToolsSidebar() {
   return [
-    {
-      text: 'Introduction',
-      children: [
-        { text: 'What is VitePress?', link: '/' },
-        { text: 'Getting Started', link: '/guide/getting-started' },
-        { text: 'Configuration', link: '/guide/configuration' },
-        { text: 'Asset Handling', link: '/guide/assets' },
-        { text: 'Markdown Extensions', link: '/guide/markdown' },
-        { text: 'Using Vue in Markdown', link: '/guide/using-vue' },
-        { text: 'Deploying', link: '/guide/deploy' }
-      ]
-    },
-    {
-      text: 'Advanced',
-      children: [
-        { text: 'Frontmatter', link: '/guide/frontmatter' },
-        { text: 'Theming', link: '/guide/theming' },
-        { text: 'API Reference', link: '/guide/api' },
-        {
-          text: 'Differences from Vuepress',
-          link: '/guide/differences-from-vuepress'
-        }
-      ]
-    }
-  ]
-}
-
-function getConfigSidebar() {
-  return [
-    {
-      text: 'App Config',
-      children: [{ text: 'Basics', link: '/config/basics' }]
-    },
-    {
-      text: 'Theme Config',
-      children: [
-        { text: 'Homepage', link: '/config/homepage' },
-        { text: 'Algolia Search', link: '/config/algolia-search' },
-        { text: 'Carbon Ads', link: '/config/carbon-ads' }
-      ]
-    }
+    { text: 'Docker', link: '/tools/docker' },
+    { text: 'GoReleaser', link: '/tools/goreleaser' },
+    { text: 'Make', link: '/tools/make' },
+    { text: 'RKE', link: '/tools/rke' },
+    { text: 'Semantic Release', link: '/tools/semantic-release' },
+    { text: 'Statica', link: '/tools/statica' },
   ]
 }
