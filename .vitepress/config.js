@@ -111,7 +111,76 @@ function getKubernetesSidebar() {
 }
 
 function getTerraformSidebar() {
-  return []
+  return [
+    { text: 'Home', link: '/terraform/' },
+    {
+      text: 'Definitions',
+      children: [
+        { text: 'Variables', link: '/terraform/variables' },
+        { text: 'Outputs', link: '/terraform/outputs' },
+        { text: 'Resources', link: '/terraform/resources' },
+        { text: 'Data Sources', link: '/terraform/data-sources' },
+        { text: 'Providers', link: '/terraform/providers' },
+        { text: 'Modules', link: '/terraform/modules' },
+        { text: 'Versions', link: '/terraform/versions' },
+        { text: 'Backend', link: '/terraform/backend' },
+      ]
+    },
+    {
+      text: 'Commands',
+      children: [
+        { text: 'Apply', link: '/terraform/cmd/apply' },
+        { text: 'Destroy', link: '/terraform/cmd/destroy' },
+        { text: 'Taint', link: '/terraform/cmd/taint' },
+        { text: 'Import', link: '/terraform/cmd/import' },
+        { text: 'Move', link: '/terraform/cmd/state-mv' },
+      ]
+    },
+    {
+      text: 'State',
+      children: [
+        { text: 'Intro', link: '/terraform/state/' },
+        { text: 'Remote Backend', link: '/terraform/state/remote' },
+      ]
+    },
+    {
+      text: 'HashiCorp',
+      children: [
+        { text: 'Terraform Registry', link: '/terraform/terraform-registry' },
+        { text: 'Terraform Cloud', link: '/terraform/terraform-cloud' },
+      ]
+    },
+    {
+      text: 'Examples',
+      children: [
+        {
+          text: 'AWS',
+          children: [
+            { text: 'EC2', link: '/terraform/examples/aws/ec2' },
+            { text: 'EC2 in VPC', link: '/terraform/examples/aws/ec2-in-vpc' },
+            { text: 'EKS (Managed Kubernetes)', link: '/terraform/examples/aws/eks' },
+            { text: 'RDS', link: '/terraform/examples/aws/rds' },
+            { text: 'S3 remote backend', link: '/terraform/examples/aws/s3-backend' },
+          ]
+        },
+        {
+          text: 'DigitalOcean',
+          children: [
+            { text: 'Droplet', link: '/terraform/examples/do/ec2' },
+            { text: 'Managed Kubernetes', link: '/terraform/examples/do/k8s' },
+            { text: 'Managed PostgreSQL', link: '/terraform/examples/do/pgsql' },
+          ]
+        },
+        {
+          text: 'CloudFlare',
+          children: [
+            { text: 'Record', link: '/terraform/examples/cf/record' },
+            { text: 'Zone', link: '/terraform/examples/cf/zone' },
+          ]
+        },
+      ]
+    }
+  ]
 }
 
 function getGitSidebar() {
